@@ -1,24 +1,31 @@
-# README
+# Concertiz
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Le site web de gestion de ticket de concert.
 
-Things you may want to cover:
+-----------------------------------------
 
-* Ruby version
+Application Rails.
 
-* System dependencies
+-----------------------------------------
 
-* Configuration
+- Le site web permet à un utilisateur de rechercher et acheter un ticket de concert.
 
-* Database creation
+- Il est également fonctionnel pour un utilisateur connecté ou non.
 
-* Database initialization
+- Lors de l'achat d'un ticket, un email est evnoyé.
 
-* How to run the test suite
+- Un utilisateur dispose d'une page profil lui permettant de voir les concerts qu'il a acheté.
 
-* Services (job queues, cache servers, search engines, etc.)
+- Un utilisateur connecté peut réserver un ou x tickets tant qu'il reste des places.
 
-* Deployment instructions
+- Un module de recherche est accessible sur toutes les pages.
 
-* ...
+- La page d'accueil affiche les derniers concerts.
+
+- La page de concert affiche les informations et permet d'acheter un/x tickets.
+
+- Un module social de commentaire est disponible.
+
+- Un back-office est disponible permettant à l’admin d’ajouter/modifier/supprimer un concert.
+
+-----------------------------------------
