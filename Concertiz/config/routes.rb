@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'pages/profile'
 
+  get 'pages/index'
+
   root :to => 'users#index'
   resources :user_sessions
   resources :users
