@@ -11,4 +11,8 @@ class PagesController < ApplicationController
   def login
     @titre = "Login"
   end
+
+  def concerts
+    @titre = "Concerts"
+  end
 end

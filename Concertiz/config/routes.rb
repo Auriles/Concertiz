@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get 'pages/login'
 
+  get 'pages/concerts'
+
   root :to => 'users#index'
   resources :user_sessions
   resources :users
