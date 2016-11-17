@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'user_sessions/destroy'
 
+  get 'pages/profile'
+
   root :to => 'users#index'
   resources :user_sessions
   resources :users
