@@ -1,6 +1,6 @@
 # Concertiz
 
-Le site web de gestion de ticket de concert.
+Le site web de gestion de tickets de concerts.
 
 -----------------------------------------
 
@@ -12,7 +12,7 @@ Application Rails.
 
 - Il est également fonctionnel pour un utilisateur connecté ou non.
 
-- Lors de l'achat d'un ticket, un email est evnoyé.
+- Lors de l'achat d'un ticket, un email est envoyé.
 
 - Un utilisateur dispose d'une page profil lui permettant de voir les concerts qu'il a acheté.
 
