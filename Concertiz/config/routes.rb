@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get 'pages/index'
 
+  get 'pages/login'
+
   root :to => 'users#index'
   resources :user_sessions
   resources :users

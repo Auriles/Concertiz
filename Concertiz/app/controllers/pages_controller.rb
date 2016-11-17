@@ -7,4 +7,8 @@ class PagesController < ApplicationController
   def index
     @titre = "Index"
   end
+
+  def login
+    @titre = "Login"
+  end
 end
