@@ -5,15 +5,15 @@ Rails.application.routes.draw do
 
   get 'user_sessions/destroy'
 
-  get 'pages/profile'
-
-  get 'pages/index'
+  get 'pages/register'
 
   get 'pages/login'
 
-  get 'pages/concerts'
+  get 'pages/profile'
 
-  get 'pages/register'
+  get 'pages/home'
+
+  get 'pages/concerts'
 
   root :to => 'users#index'
   resources :user_sessions

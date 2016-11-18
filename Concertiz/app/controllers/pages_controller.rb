@@ -1,22 +1,22 @@
 class PagesController < ApplicationController
 
-  def profile
-    @titre = "Profile"
-  end
-
-  def index
-    @titre = "Index"
+  def register
+    @titre = "Register"
   end
 
   def login
     @titre = "Login"
   end
 
-  def concerts
-    @titre = "Concerts"
+  def profile
+    @titre = "Profile"
   end
 
-  def register
-    @titre = "Register"
+  def home
+    @titre = "Home"
+  end
+
+  def concerts
+    @titre = "Concerts"
   end
 end
