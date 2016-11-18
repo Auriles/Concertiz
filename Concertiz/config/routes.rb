@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get 'pages/concerts'
 
+  get 'pages/register'
+
   root :to => 'users#index'
   resources :user_sessions
   resources :users

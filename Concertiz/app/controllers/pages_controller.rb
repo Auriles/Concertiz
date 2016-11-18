@@ -15,4 +15,8 @@ class PagesController < ApplicationController
   def concerts
     @titre = "Concerts"
   end
+
+  def register
+    @titre = "Register"
+  end
 end
