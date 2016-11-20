@@ -108,8 +108,11 @@
             <label>
               Rechercher un concert
             </label>
-            <input class="form-control" placeholder="Ex : Nekfeu" id="input_1115" />
-          </div><a href="index.html" class="btn btn-block btn-blue-gray">Rechercher</a>
+            <!-- <input class="form-control" placeholder="Ex : Nekfeu" id="input_1115" /> -->
+            <%= text_field :input , :_1115 , {:class=>'form-control', :placeholder=>'Ex : Nekfeu'} %>
+          </div>
+          <!-- <a href="index.html" class="btn btn-block btn-blue-gray">Rechercher</a> -->
+          <%= submit_tag 'Rechercher', {:class=>'btn btn-block btn-blue-gray'} %>
         </form>
       </div>
     </div>
@@ -121,21 +124,27 @@
 <div class="bloc bgc-white-smoke l-bloc" id="bloc-9">
   <div class="container bloc-md">
     <div class="row">
+
       <div class="col-sm-12">
         <div class="row">
           <div class="col-sm-4">
-            <img src="img/placeholder-image.png" class="mg-sm" width="250" height="200" />
+            <!-- <img src="img/placeholder-image.png" class="mg-sm" width="250" height="200" /> -->
+            <%= image_tag 'images/' , {:class=>'mg-sm', :width=>'250', :height=>'200' }  %>
             <div class="btn-group pull-left">
               <a href="#" class="btn dropdown-toggle btn-blue-gray" data-toggle="dropdown" aria-expanded="false">Places<span class="caret"></span></a>
+              <!-- <%= link_to 'Places', '#', {:class=>'btn dropdown-toggle btn-blue-gray'} %> -->
               <ul class="dropdown-menu" role="menu">
                 <li>
-                  <a class="a-btn a-block" href="concerts.html">1 place</a>
+                  <!-- <a class="a-btn a-block" href="concerts.html">1 place</a> -->
+                  <%= link_to '1 Place', '#', {:class=>'a-btn a-block'} %>
                 </li>
                 <li>
-                  <a href="index.html" class="a-btn a-block">2 places</a>
+                  <!-- <a href="index.html" class="a-btn a-block">2 places</a> -->
+                  <%= link_to '2 Places', '#', {:class=>'a-btn a-block'} %>
                 </li>
                 <li>
-                  <a href="index.html" class="a-btn a-block">3 places</a>
+                  <!-- <a href="index.html" class="a-btn a-block">3 places</a> -->
+                  <%= link_to '3 Places', '#', {:class=>'a-btn a-block'} %>
                 </li>
               </ul>
             </div>
@@ -149,7 +158,9 @@
               <div class="form-group">
                 <label>
                   Commentaires
-                </label><textarea class="form-control" rows="4" cols="50" id="textarea_2466" placeholder="Soyez le premier à commenter !"></textarea>
+                </label>
+                <!-- <textarea class="form-control" rows="4" cols="50" id="textarea_2466" placeholder="Soyez le premier à commenter !"></textarea> -->
+                <%= text_field :textarea , :_2466 , {:class=>'form-control', :placeholder=>'Soyez le premier à commenter !'} %>
               </div>
             </form>
           </div>
@@ -171,163 +182,197 @@
             </h4>
           </div>
           <div class="col-sm-4">
-            <img src="img/placeholder-image.png" class="img-responsive" />
+            <!-- <img src="img/placeholder-image.png" class="img-responsive" /> -->
+            <%= image_tag 'images/' , {:class=>'mg-sm', :width=>'250', :height=>'200' }  %>
           </div>
         </div>
-        <div class="row voffset">
-          <div class="col-sm-4">
-            <img src="img/placeholder-image.png" class="mg-sm" width="250" height="200" />
-            <div class="btn-group pull-left">
-              <a href="#" class="btn dropdown-toggle btn-blue-gray" data-toggle="dropdown" aria-expanded="true">Places<span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li>
-                  <a class="a-btn a-block" href="concerts.html">1 place</a>
-                </li>
-                <li>
-                  <a href="index.html" class="a-btn a-block">2 places</a>
-                </li>
-                <li>
-                  <a href="index.html" class="a-btn a-block">3 places</a>
-                </li>
-              </ul>
-            </div>
-            <button class="btn btn-block btn-blue-gray bloc-button" type="submit">
-              Réserver
-            </button>
-            <div class="divider-h">
-              <span class="divider"></span>
-            </div>
-            <form id="form_794" novalidate>
-              <div class="form-group">
-                <label>
-                  Commentaires
-                </label><textarea class="form-control" rows="4" cols="50" id="textarea_2466" placeholder="Soyez le premier à commenter !"></textarea>
+
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-sm-4">
+              <!-- <img src="img/placeholder-image.png" class="mg-sm" width="250" height="200" /> -->
+              <%= image_tag 'images/' , {:class=>'mg-sm', :width=>'250', :height=>'200' }  %>
+              <div class="btn-group pull-left">
+                <a href="#" class="btn dropdown-toggle btn-blue-gray" data-toggle="dropdown" aria-expanded="false">Places<span class="caret"></span></a>
+                <!-- <%= link_to 'Places', '#', {:class=>'btn dropdown-toggle btn-blue-gray'} %> -->
+                <ul class="dropdown-menu" role="menu">
+                  <li>
+                    <!-- <a class="a-btn a-block" href="concerts.html">1 place</a> -->
+                    <%= link_to '1 Place', '#', {:class=>'a-btn a-block'} %>
+                  </li>
+                  <li>
+                    <!-- <a href="index.html" class="a-btn a-block">2 places</a> -->
+                    <%= link_to '2 Places', '#', {:class=>'a-btn a-block'} %>
+                  </li>
+                  <li>
+                    <!-- <a href="index.html" class="a-btn a-block">3 places</a> -->
+                    <%= link_to '3 Places', '#', {:class=>'a-btn a-block'} %>
+                  </li>
+                </ul>
               </div>
-            </form>
-          </div>
-          <div class="col-sm-4">
-            <h3 class="mg-md">
-              Concert 2
-            </h3>
-            <h4 class="mg-md">
-              Artiste :
-            </h4>
-            <h4 class="mg-md">
-              Places disponibles :
-            </h4>
-            <h4 class="mg-md">
-              Horaires :
-            </h4>
-            <h4 class="mg-md">
-              Adresse :
-            </h4>
-          </div>
-          <div class="col-sm-4">
-            <img src="img/placeholder-image.png" class="img-responsive" />
-          </div>
-        </div>
-        <div class="row voffset">
-          <div class="col-sm-4">
-            <img src="img/placeholder-image.png" class="mg-sm" width="250" height="200" />
-            <div class="btn-group pull-left">
-              <a href="#" class="btn dropdown-toggle btn-blue-gray" data-toggle="dropdown" aria-expanded="false">Places<span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li>
-                  <a class="a-btn a-block" href="concerts.html">1 place</a>
-                </li>
-                <li>
-                  <a href="index.html" class="a-btn a-block">2 places</a>
-                </li>
-                <li>
-                  <a href="index.html" class="a-btn a-block">3 places</a>
-                </li>
-              </ul>
-            </div>
-            <button class="btn btn-block btn-blue-gray bloc-button" type="submit">
-              Réserver
-            </button>
-            <div class="divider-h">
-              <span class="divider"></span>
-            </div>
-            <form id="form_794" novalidate>
-              <div class="form-group">
-                <label>
-                  Commentaires
-                </label><textarea class="form-control" rows="4" cols="50" id="textarea_2466" placeholder="Soyez le premier à commenter !"></textarea>
+              <button class="btn btn-block btn-blue-gray bloc-button" type="submit">
+                Réserver
+              </button>
+              <div class="divider-h">
+                <span class="divider"></span>
               </div>
-            </form>
-          </div>
-          <div class="col-sm-4">
-            <h3 class="mg-md">
-              Concert 3
-            </h3>
-            <h4 class="mg-md">
-              Artiste :
-            </h4>
-            <h4 class="mg-md">
-              Places disponibles :
-            </h4>
-            <h4 class="mg-md">
-              Horaires :
-            </h4>
-            <h4 class="mg-md">
-              Adresse :
-            </h4>
-          </div>
-          <div class="col-sm-4">
-            <img src="img/placeholder-image.png" class="img-responsive" />
-          </div>
-        </div>
-        <div class="row voffset">
-          <div class="col-sm-4">
-            <img src="img/placeholder-image.png" class="mg-sm" width="250" height="200" />
-            <div class="btn-group pull-left">
-              <a href="#" class="btn dropdown-toggle btn-blue-gray" data-toggle="dropdown" aria-expanded="false">Places<span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li>
-                  <a class="a-btn a-block" href="concerts.html">1 place</a>
-                </li>
-                <li>
-                  <a href="index.html" class="a-btn a-block">2 places</a>
-                </li>
-                <li>
-                  <a href="index.html" class="a-btn a-block">3 places</a>
-                </li>
-              </ul>
+              <form id="form_794" novalidate>
+                <div class="form-group">
+                  <label>
+                    Commentaires
+                  </label>
+                  <!-- <textarea class="form-control" rows="4" cols="50" id="textarea_2466" placeholder="Soyez le premier à commenter !"></textarea> -->
+                  <%= text_field :textarea , :_2466 , {:class=>'form-control', :placeholder=>'Soyez le premier à commenter !'} %>
+                </div>
+              </form>
             </div>
-            <button class="btn btn-block btn-blue-gray bloc-button" type="submit">
-              Réserver
-            </button>
-            <div class="divider-h">
-              <span class="divider"></span>
+            <div class="col-sm-4">
+              <h3 class="mg-md">
+                Concert 2
+              </h3>
+              <h4 class="mg-md">
+                Artiste :
+              </h4>
+              <h4 class="mg-md">
+                Places disponibles :
+              </h4>
+              <h4 class="mg-md">
+                Horaires :
+              </h4>
+              <h4 class="mg-md">
+                Adresse :
+              </h4>
             </div>
-            <form id="form_794" novalidate>
-              <div class="form-group">
-                <label>
-                  Commentaires
-                </label><textarea class="form-control" rows="4" cols="50" id="textarea_2466" placeholder="Soyez le premier à commenter !"></textarea>
+            <div class="col-sm-4">
+              <!-- <img src="img/placeholder-image.png" class="img-responsive" /> -->
+              <%= image_tag 'images/' , {:class=>'mg-sm', :width=>'250', :height=>'200' }  %>
+            </div>
+          </div>
+
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-4">
+                <!-- <img src="img/placeholder-image.png" class="mg-sm" width="250" height="200" /> -->
+                <%= image_tag 'images/' , {:class=>'mg-sm', :width=>'250', :height=>'200' }  %>
+                <div class="btn-group pull-left">
+                  <a href="#" class="btn dropdown-toggle btn-blue-gray" data-toggle="dropdown" aria-expanded="false">Places<span class="caret"></span></a>
+                  <!-- <%= link_to 'Places', '#', {:class=>'btn dropdown-toggle btn-blue-gray'} %> -->
+                  <ul class="dropdown-menu" role="menu">
+                    <li>
+                      <!-- <a class="a-btn a-block" href="concerts.html">1 place</a> -->
+                      <%= link_to '1 Place', '#', {:class=>'a-btn a-block'} %>
+                    </li>
+                    <li>
+                      <!-- <a href="index.html" class="a-btn a-block">2 places</a> -->
+                      <%= link_to '2 Places', '#', {:class=>'a-btn a-block'} %>
+                    </li>
+                    <li>
+                      <!-- <a href="index.html" class="a-btn a-block">3 places</a> -->
+                      <%= link_to '3 Places', '#', {:class=>'a-btn a-block'} %>
+                    </li>
+                  </ul>
+                </div>
+                <button class="btn btn-block btn-blue-gray bloc-button" type="submit">
+                  Réserver
+                </button>
+                <div class="divider-h">
+                  <span class="divider"></span>
+                </div>
+                <form id="form_794" novalidate>
+                  <div class="form-group">
+                    <label>
+                      Commentaires
+                    </label>
+                    <!-- <textarea class="form-control" rows="4" cols="50" id="textarea_2466" placeholder="Soyez le premier à commenter !"></textarea> -->
+                    <%= text_field :textarea , :_2466 , {:class=>'form-control', :placeholder=>'Soyez le premier à commenter !'} %>
+                  </div>
+                </form>
               </div>
-            </form>
-          </div>
-          <div class="col-sm-4">
-            <h3 class="mg-md">
-              Concert 4
-            </h3>
-            <h4 class="mg-md">
-              Artiste :
-            </h4>
-            <h4 class="mg-md">
-              Places disponibles :
-            </h4>
-            <h4 class="mg-md">
-              Horaires :
-            </h4>
-            <h4 class="mg-md">
-              Adresse :
-            </h4>
-          </div>
-          <div class="col-sm-4">
-            <img src="img/placeholder-image.png" class="img-responsive" />
+              <div class="col-sm-4">
+                <h3 class="mg-md">
+                  Concert 3
+                </h3>
+                <h4 class="mg-md">
+                  Artiste :
+                </h4>
+                <h4 class="mg-md">
+                  Places disponibles :
+                </h4>
+                <h4 class="mg-md">
+                  Horaires :
+                </h4>
+                <h4 class="mg-md">
+                  Adresse :
+                </h4>
+              </div>
+              <div class="col-sm-4">
+                <!-- <img src="img/placeholder-image.png" class="img-responsive" /> -->
+                <%= image_tag 'images/' , {:class=>'mg-sm', :width=>'250', :height=>'200' }  %>
+              </div>
+            </div>
+
+            <div class="col-sm-12">
+              <div class="row">
+                <div class="col-sm-4">
+                  <!-- <img src="img/placeholder-image.png" class="mg-sm" width="250" height="200" /> -->
+                  <%= image_tag 'images/' , {:class=>'mg-sm', :width=>'250', :height=>'200' }  %>
+                  <div class="btn-group pull-left">
+                    <a href="#" class="btn dropdown-toggle btn-blue-gray" data-toggle="dropdown" aria-expanded="false">Places<span class="caret"></span></a>
+                    <!-- <%= link_to 'Places', '#', {:class=>'btn dropdown-toggle btn-blue-gray'} %> -->
+                    <ul class="dropdown-menu" role="menu">
+                      <li>
+                        <!-- <a class="a-btn a-block" href="concerts.html">1 place</a> -->
+                        <%= link_to '1 Place', '#', {:class=>'a-btn a-block'} %>
+                      </li>
+                      <li>
+                        <!-- <a href="index.html" class="a-btn a-block">2 places</a> -->
+                        <%= link_to '2 Places', '#', {:class=>'a-btn a-block'} %>
+                      </li>
+                      <li>
+                        <!-- <a href="index.html" class="a-btn a-block">3 places</a> -->
+                        <%= link_to '3 Places', '#', {:class=>'a-btn a-block'} %>
+                      </li>
+                    </ul>
+                  </div>
+                  <button class="btn btn-block btn-blue-gray bloc-button" type="submit">
+                    Réserver
+                  </button>
+                  <div class="divider-h">
+                    <span class="divider"></span>
+                  </div>
+                  <form id="form_794" novalidate>
+                    <div class="form-group">
+                      <label>
+                        Commentaires
+                      </label>
+                      <!-- <textarea class="form-control" rows="4" cols="50" id="textarea_2466" placeholder="Soyez le premier à commenter !"></textarea> -->
+                      <%= text_field :textarea , :_2466 , {:class=>'form-control', :placeholder=>'Soyez le premier à commenter !'} %>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-sm-4">
+                  <h3 class="mg-md">
+                    Concert 4
+                  </h3>
+                  <h4 class="mg-md">
+                    Artiste :
+                  </h4>
+                  <h4 class="mg-md">
+                    Places disponibles :
+                  </h4>
+                  <h4 class="mg-md">
+                    Horaires :
+                  </h4>
+                  <h4 class="mg-md">
+                    Adresse :
+                  </h4>
+                </div>
+                <div class="col-sm-4">
+                  <!-- <img src="img/placeholder-image.png" class="img-responsive" /> -->
+                  <%= image_tag 'images/' , {:class=>'mg-sm', :width=>'250', :height=>'200' }  %>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -343,7 +388,9 @@
       <div class="col-sm-6">
         <h3 class="mg-md tc-white">
           Nous suivre !
-        </h3><a href="https://github.com/Auriles" class="a-btn a-block ltc-white">Github</a>
+        </h3>
+        <!-- <a href="https://github.com/Auriles" class="a-btn a-block ltc-white">Github</a> -->
+        <%= link_to 'Github', 'https://github.com/Auriles', {:class=>'a-btn a-block ltc-white'} %>
       </div>
       <div class="col-sm-6">
         <h3 class="mg-md tc-white">
