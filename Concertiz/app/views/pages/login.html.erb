@@ -97,14 +97,18 @@
             <label>
               Identifiant
             </label>
-            <input id="name4" class="form-control" required placeholder="Veuillez saisir votre email" />
+            <!-- <input id="name4" class="form-control" required placeholder="Veuillez saisir votre email" /> -->
+            <%= text_field :name4 , :email , {:class=>'form-control', :type=>'email', :placeholder=>'Veuillez saisir votre adresse email'} %>
           </div>
           <div class="form-group">
             <label>
               Mot de passe
             </label>
-            <input id="email4" class="form-control" required placeholder="Veuillez saisir votre mot de passe" type="password" />
-          </div> <a class="btn btn-block btn-rd btn-sm btn-medium-spring-green" href="profile.html"><span class="ion ion-android-done icon-sm"></span></a>
+            <!-- <input id="email4" class="form-control" required placeholder="Veuillez saisir votre mot de passe" type="password" /> -->
+            <%= password_field :email4 , :mdp , {:class=>'form-control', :placeholder=>'Veuillez saisir votre mot de passe', :maxlength=>"25"} %>
+          </div>
+          <!-- <a class="btn btn-block btn-rd btn-sm btn-medium-spring-green" href="profile.html"><span class="ion ion-android-done icon-sm"></span></a> -->
+          <%= link_to 'Se connecter', 'profile.html', {:class=>'btn btn-block btn-rd btn-sm btn-medium-spring-green'} %>
         </form>
       </div>
     </div>
@@ -119,7 +123,9 @@
       <div class="col-sm-6">
         <h3 class="mg-md tc-white">
           Nous suivre !
-        </h3><a href="https://github.com/Auriles" class="a-btn a-block ltc-white">Github</a>
+        </h3>
+        <!-- <a href="https://github.com/Auriles" class="a-btn a-block ltc-white">Github</a> -->
+        <%= link_to 'Github', 'https://github.com/Auriles', {:class=>'a-btn a-block ltc-white'} %>
       </div>
       <div class="col-sm-6">
         <h3 class="mg-md tc-white">
