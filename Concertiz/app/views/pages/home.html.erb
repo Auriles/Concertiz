@@ -129,10 +129,11 @@
             <label>
               Rechercher un concert
             </label>
-            <input class="form-control" placeholder="Ex : Nekfeu" id="input_416" />
+            <!-- <input class="form-control" placeholder="Ex : Nekfeu" id="input_416" /> -->
+            <%= text_field :input , :_416 , {:class=>'form-control'} %>
           </div>
           <!-- <a href="concerts.html" class="btn  btn-block btn-celestial-blue">Rechercher</a> -->
-          <%= link_to 'Rechercher', 'concerts.html', {:class=>'btn  btn-block btn-celestial-blue'} %>
+          <%= submit_tag 'Rechercher', {:class=>'btn  btn-block btn-celestial-blue'} %>
         </form>
       </div>
     </div>
@@ -145,7 +146,8 @@
   <div class="container bloc-md">
     <div class="row">
       <div class="col-sm-3">
-        <img src="img/placeholder-image.png" class="img-responsive" />
+        <!-- <img src="img/placeholder-image.png" class="img-responsive" /> -->
+        <%= image_tag 'images/' , {:class=>'img-responsive'}  %>
         <h3 class="mg-md">
           Concert 1
         </h3>
@@ -165,7 +167,8 @@
         <%= link_to 'Voir', 'concerts.html', {:class=>'a-btn ltc-celestial-blue a-block'} %>
       </div>
       <div class="col-sm-3">
-        <img src="img/placeholder-image.png" class="img-responsive" />
+        <!-- <img src="img/placeholder-image.png" class="img-responsive" /> -->
+        <%= image_tag 'images/' , {:class=>'img-responsive'}  %>
         <h3 class="mg-md">
           Concert 2
         </h3>
@@ -185,7 +188,8 @@
         <%= link_to 'Voir', 'concerts.html', {:class=>'a-btn ltc-celestial-blue a-block'} %>
       </div>
       <div class="col-sm-3">
-        <img src="img/placeholder-image.png" class="img-responsive" />
+        <!-- <img src="img/placeholder-image.png" class="img-responsive" /> -->
+        <%= image_tag 'images/' , {:class=>'img-responsive'}  %>
         <h3 class="mg-md">
           Concert 3
         </h3>
@@ -205,7 +209,8 @@
         <%= link_to 'Voir', 'concerts.html', {:class=>'a-btn ltc-celestial-blue a-block'} %>
       </div>
       <div class="col-sm-3">
-        <img src="img/placeholder-image.png" class="img-responsive" />
+        <!-- <img src="img/placeholder-image.png" class="img-responsive" /> -->
+        <%= image_tag 'images/' , {:class=>'img-responsive'}  %>
         <h3 class="mg-md">
           Concert 4
         </h3>
