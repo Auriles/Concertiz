@@ -1,29 +1,38 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Artist:</strong>
-  <%= @show.artist %>
-</p>
+<h1>Informations sur le concert</h1>
 
-<p>
-  <strong>Date:</strong>
-  <%= @show.date %>
-</p>
+<!-- bloc-0 -->
+<div class="bloc l-bloc bgc-white" id="bloc-0">
+  <div class="container bloc-lg">
+    <div class="row">
+      <div class="col-sm-3">
+        <span class="empty-column">
+          <h5>
+            <strong>Artiste :</strong>
+            <%= @show.artist %>
+          </h5>
+          <h5>
+            <strong>Date :</strong>
+            <%= @show.date %>
+          </h5>
+          <h5>
+            <strong>Adresse :</strong>
+            <%= @show.adress %>
+          </h5>
+          <h5>
+            <strong>Prix :</strong>
+            <%= @show.price %>
+          </h5>
+          <h5>
+            <strong>Places :</strong>
+            <%= @show.places %>
+          </h5>
+        </span>
+      </div>
+    </div>
+  </div>
+  </div>
 
-<p>
-  <strong>Adress:</strong>
-  <%= @show.adress %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @show.price %>
-</p>
-
-<p>
-  <strong>Places:</strong>
-  <%= @show.places %>
-</p>
-
-<%= link_to 'Edit', edit_show_path(@show) %> |
-<%= link_to 'Back', shows_path %>
+  <%= link_to 'Edit', edit_show_path(@show) %> |
+  <%= link_to 'Back', shows_path %>
