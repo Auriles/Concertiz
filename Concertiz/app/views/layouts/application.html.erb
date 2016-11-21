@@ -8,7 +8,8 @@
       <link rel="shortcut icon" type="image/png" href="favicon.png" />
       <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
       <%= stylesheet_link_tag    "pages" %>
-      <%= javascript_include_tag "application" %>
+      <%= javascript_include_tag    "application" %>
+
       <%= csrf_meta_tags %>
 
     <!-- Ionicons -->
@@ -29,7 +30,7 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <!-- Latest compiled and minified JavaScript -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- Bootstrap fin -->
 
@@ -46,7 +47,7 @@
         <div class="navbar-header">
 
           <!-- <a class="navbar-brand" href="home.html">Concertiz</a> -->
-          <%= link_to 'Concertiz', 'home.html', {:class=>'navbar-brand'} %>
+          <%= link_to 'Concertiz', pages_home_path, {:class=>'navbar-brand'} %>
 
           <button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
             <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
@@ -56,27 +57,27 @@
           <ul class="site-navigation nav navbar-nav">
             <li>
               <!-- <a href="register.html" class="ltc-white">Register</a> -->
-              <%= link_to 'Register', 'register.html', {:class=>'ltc-white'} %>
+              <%= link_to 'S\'inscrire', new_user_path, {:class=>'ltc-white'} %>
             </li>
             <li>
               <div class="dropdown">
-                <!-- <a href="#" class="ltc-white dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Connexion<span class="caret"></span></a> -->
-                <%= link_to 'Connexion', 'login.html', {:class=>'ltc-white dropdown-toggle'} %>
+                <a href="#" class="ltc-white dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Connexion<span class="caret"></span></a>
+                <!-- <%= link_to 'Connexion', '/user_sessions/new', {:class=>'ltc-white dropdown-toggle'} %> -->
                 <ul class="dropdown-menu" role="menu">
                   <li>
                     <!-- <a href="login.html" class="a-btn a-block">Se connecter</a> -->
-                    <%= link_to 'Se connecter', 'login.html', {:class=>'a-btn a-block'} %>
+                    <%= link_to 'Se connecter', user_sessions_new_path, {:class=>'a-btn a-block'} %>
                   </li>
                   <li>
                     <!-- <a href="index.html" class="a-btn a-block">Se déconnecter</a> -->
-                    <%= link_to 'Se déconnecter', 'home.html', {:class=>'a-btn a-block'} %>
+                    <%= link_to 'Se déconnecter', user_sessions_destroy_path, {:class=>'a-btn a-block'} %>
                   </li>
                 </ul>
               </div>
             </li>
             <li>
               <!-- <a href="concerts.html" class="ltc-white">Concerts</a> -->
-              <%= link_to 'Concerts', 'concerts.html', {:class=>'ltc-white'} %>
+              <%= link_to 'Concerts', 'pages/concerts.html', {:class=>'ltc-white'} %>
             </li>
           </ul>
         </div>

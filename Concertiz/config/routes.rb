@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   get 'pages/concerts'
 
-  root :to => 'users#index'
+  root :to => 'pages#home'
   resources :user_sessions
   resources :users
 
