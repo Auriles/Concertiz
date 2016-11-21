@@ -1,4 +1,3 @@
-<%= form_for(user) do |f| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -11,22 +10,62 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+<!-- bloc-3 -->
+<div class="bloc bgc-white-smoke l-bloc" id="bloc-3">
+  <div class="container bloc-md">
+    <div class="row">
+      <div class="col-sm-12">
+        <%= form_for(user) do |f| %>
+          <h1 class="mg-md text-center">
+            Inscription
+          </h1>
+          <div class="form-group">
+            <!-- <label>
+              Nom
+            </label> -->
+            <%= f.label :Nom %><br />
+            <!-- <input id="name" class="form-control" required placeholder="Entrez votre nom" /> -->
+            <%= f.text_field :name , {:class=>'form-control', :placeholder=>'Entrez votre nom'} %>
+          </div>
+          <div class="form-group">
+            <!-- <label>
+              Prénom
+            </label> -->
+            <%= f.label :Prénom %><br />
+            <!-- <input id="prénom" class="form-control" required placeholder="Entrez votre prénom" data-validation-required-message="prénom is required." /> -->
+            <%= f.text_field :firstname, {:class=>'form-control', :placeholder=>'Entrez votre prénom'} %>
+          </div>
+          <div class="form-group">
+            <!-- <label>
+              Email
+            </label> -->
+            <%= f.label :email %><br />
+            <!-- <input id="email" class="form-control" type="email" required placeholder="Entrez votre adresse email" /> -->
+            <%= f.text_field :email, {:class=>'form-control', :type=>'email', :placeholder=>'Entrez votre adresse email'} %>
+          </div>
+          <div class="form-group">
+            <!-- <label>
+              Mot de passe
+            </label> -->
+            <%= f.label :Mot_de_passe %><br />
+            <!-- <input id="identifiant" class="form-control" required placeholder="Veuillez choisir un mot de passe" maxlength="25" data-validation-required-message="identifiant is required." /> -->
+            <%= f.password_field :password, {:class=>'form-control', :placeholder=>'Veuillez choisir un mot de passe', :maxlength=>"25"} %>
+          </div>
+          <div class="form-group">
+            <!-- <label>
+              Confirmation de mot de passe
+            </label> -->
+            <%= f.label :Confirmation_de_mot_de_passe %><br />
+            <!-- <input id="mdp" class="form-control" required placeholder="Veuillez confirmer votre mot de passe" maxlength="25" data-validation-required-message="mdp is required." /> -->
+            <%= f.password_field :password_confirmation, {:class=>'form-control', :placeholder=>'Veuillez confirmer votre mot de passe', :maxlength=>"25"} %>
+          </div>
+          <!-- <button class="bloc-button btn btn-block btn-sm btn-rd btn-medium-spring-green" type="submit"> -->
+          <%= f.submit 'S\'inscrire', {:class=>'bloc-button btn btn-block btn-sm btn-rd btn-medium-spring-green actions'} %>
+            <!-- <span class="ion ion-android-done icon-sm"></span> -->
+          </button>
+        <%end%>
+      </div>
+    </div>
   </div>
-
-  <div class="field">
-     <%= f.label :password %><br />
-     <%= f.password_field :password %>
-  </div>
-
-  <div class="field">
-     <%= f.label :password_confirmation %><br />
-     <%= f.password_field :password_confirmation %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
+<!-- bloc-3 END -->
