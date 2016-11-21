@@ -1,15 +1,33 @@
-<%= form_tag user_sessions_path, :method => :post do %>
-  <div class="field">
-    <%= label_tag :email %><br />
-    <%= text_field_tag :email %>
+<!-- bloc-4 -->
+<div class="bloc bgc-white-smoke l-bloc" id="bloc-4">
+  <div class="container bloc-xl">
+    <div class="row">
+      <div class="col-sm-12">
+        <%= form_tag user_sessions_path, :method => :post do %>
+          <h1 class="mg-md text-center">
+            Connexion
+          </h1>
+          <div class="form-group">
+            <!-- <label>
+              Identifiant
+            </label> -->
+            <%= label_tag :Identifiant %><br />
+            <!-- <input id="name4" class="form-control" required placeholder="Veuillez saisir votre email" /> -->
+            <%= text_field :name4, :email , {:class=>'form-control', :type=>'email', :placeholder=>'Veuillez saisir votre adresse email'} %>
+          </div>
+          <div class="form-group">
+            <!-- <label>
+              Mot de passe
+            </label> -->
+            <%= label_tag :Mot_de_passe %><br />
+            <!-- <input id="email4" class="form-control" required placeholder="Veuillez saisir votre mot de passe" type="password" /> -->
+            <%= password_field :email4 , :password , {:class=>'form-control', :placeholder=>'Veuillez saisir votre mot de passe', :maxlength=>"25"} %>
+          </div>
+          <!-- <a class="btn btn-block btn-rd btn-sm btn-medium-spring-green" href="profile.html"><span class="ion ion-android-done icon-sm"></span></a> -->
+          <%= submit_tag 'Se connecter', {:class=>'btn btn-block btn-rd btn-sm btn-medium-spring-green'} %>
+        <%end%>
+      </div>
+    </div>
   </div>
-
-  <div class="field">
-    <%= label_tag :password %><br />
-    <%= password_field_tag :password %>
-  </div>
-
-  <div class="actions">
-    <%= submit_tag "Login" %>
-  </div>
-<% end %>
+</div>
+<!-- bloc-4 END -->
