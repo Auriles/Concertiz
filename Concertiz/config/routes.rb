@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   get 'pages/concerts'
 
+  get 'users/profile'
+
   root :to => 'pages#home'
   resources :user_sessions
   resources :users
