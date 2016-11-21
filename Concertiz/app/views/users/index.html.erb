@@ -24,7 +24,7 @@
         <!-- <td><%= user.salt %></td> -->
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', user_url(user), method: :delete %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,8 +32,7 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %> |
-<%= link_to 'Register', pages_register_path %> |
+<%= link_to 'S\'inscrire', new_user_path %> |
+<%= link_to 'Connexion', user_sessions_new_path %> |
 <%= link_to 'Profile', pages_profile_path %> |
-<%= link_to 'Login', user_sessions_new_path %> |
 <%= current_user %>
