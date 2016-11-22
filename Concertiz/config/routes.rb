@@ -23,6 +23,8 @@ Rails.application.routes.draw do
 
   get 'users/profile'
 
+  get 'searches/form'
+
 
   root :to => 'pages#home'
   resources :user_sessions
