@@ -18,6 +18,9 @@ class ShowsController < ApplicationController
   # GET /shows/new
   def new
     @show = Show.new
+    unless logged_in? && current_user.admin
+     redirect_to root_url
+    end
   end
 
   # GET /shows/1/edit
