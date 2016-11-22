@@ -76,8 +76,20 @@
               </div>
             </li>
             <li>
-              <!-- <a href="concerts.html" class="ltc-white">Concerts</a> -->
-              <%= link_to 'Concerts', 'pages/concerts.html', {:class=>'ltc-white'} %>
+              <div class="dropdown">
+                <a href="#" class="ltc-white dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Concerts<span class="caret"></span></a>
+                <!-- <%= link_to 'Connexion', '/user_sessions/new', {:class=>'ltc-white dropdown-toggle'} %> -->
+                <ul class="dropdown-menu" role="menu">
+                  <li>
+                    <!-- <a href="login.html" class="a-btn a-block">Se connecter</a> -->
+                    <%= link_to 'Liste des concerts', shows_path, {:class=>'a-btn a-block'} %>
+                  </li>
+                  <li>
+                    <!-- <a href="index.html" class="a-btn a-block">Se déconnecter</a> -->
+                    <%= link_to 'Créer un concert', new_show_path, {:class=>'a-btn a-block'} %>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
