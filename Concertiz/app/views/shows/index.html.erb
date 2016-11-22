@@ -67,9 +67,9 @@
           <th>Options</th> <br/>
           <% @shows.each do |show| %> <br/>
           <tr>
-            <td><%= link_to 'Show', show %></td>
-            <td><%= link_to 'Edit', edit_show_path(show) %></td>
-            <td><%= link_to 'Destroy', show, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Voir |', show %></td>
+            <td><%= link_to 'Modifier |', edit_show_path(show) %></td>
+            <td><%= link_to 'Supprimer', show, method: :delete, data: { confirm: 'Are you sure?' } %></td>
            <%end%>
           </tr>
         </span>
