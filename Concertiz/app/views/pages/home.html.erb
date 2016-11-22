@@ -62,7 +62,7 @@
     <% @shows.each do |show| %>
       <div class="col-sm-3">
         <!-- <img src="img/placeholder-image.png" class="img-responsive" /> -->
-        <%= image_tag 'nekfeu_concert' , {:class=>'img-responsive'}  %>
+        <%= image_tag 'nekfeu_concert' , {:class=>'img-responsive'}  %> <br/>
         <h4 class="mg-md">
         <p>Artiste : <%= show.artist %> </p>
         </h4>
@@ -76,10 +76,9 @@
         <p> Prix : <%= show.price %> </p>
         </h4>
         <h4 class="mg-md">
-        <p> Adresse : <%= show.places %> </p>
+        <p> Places : <%= show.places %> </p>
         </h4>
         <!-- <a href="concerts.html" class="a-btn ltc-celestial-blue a-block">Voir</a> -->
-        <%= link_to 'Voir', 'concerts.html', {:class=>'a-btn ltc-celestial-blue a-block'} %>
       </div>
       <%end%>
     </div>
