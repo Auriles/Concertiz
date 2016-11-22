@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<% if @searches.present? %>
+  <div class="col-xs-3 borders center">
+    <div>
+      <% @searches.each do |search| %>
+      <h4> <%= search.artist %> </h4>
+        <%= link_to 'Voir la description de ' "#{search.artist}", show_path(search), :class => "btn btn-outline-success" %>
+      <%end%>
+    </div>
+  </div>
+<% else %>
+  <p> Aucun résultat ne correspond à votre demande "<%= params[:query] %>".</p>
+<% end %>

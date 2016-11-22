@@ -2,24 +2,26 @@ class PagesController < ApplicationController
 skip_before_action :require_login, only: [:home, :concerts, :profile]
 
   def register
-    @titre = "Register"
+    @title = "Register"
   end
 
   def login
-    @titre = "Login"
+    @title = "Login"
   end
 
   def profile
-    @titre = "Profile"
+    @title = "Profile"
   end
 
   def home
-    @titre = "Home"
+    @title = "Home"
     @shows = Show.all
+    @searches = Search.all
+    @searches = Show.where("artist LIKE ?", "%#{params[:query]}%")
   end
 
   def concerts
-    @titre = "Concerts"
+    @title = "Concerts"
     @shows = Show.all
   end
 end

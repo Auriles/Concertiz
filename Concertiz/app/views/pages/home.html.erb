@@ -42,11 +42,8 @@
             <label>
               Rechercher un concert
             </label>
-            <!-- <input class="form-control" placeholder="Ex : Nekfeu" id="input_416" /> -->
-            <%= text_field :input , :_416 , {:class=>'form-control', :placeholder=>'Ex : Nekfeu'} %>
           </div>
-          <!-- <a href="concerts.html" class="btn  btn-block btn-celestial-blue">Rechercher</a> -->
-          <%= submit_tag 'Rechercher', {:class=>'btn  btn-block btn-celestial-blue'} %>
+          <%= render 'searches/form' %>
         </form>
       </div>
     </div>
@@ -61,7 +58,6 @@
     <div class="row">
     <% @shows.each do |show| %>
       <div class="col-sm-3">
-        <!-- <img src="img/placeholder-image.png" class="img-responsive" /> -->
         <%= image_tag 'nekfeu_concert' , {:class=>'img-responsive'}  %> <br/>
         <h4 class="mg-md">
         <p>Artiste : <%= show.artist %> </p>
@@ -78,7 +74,6 @@
         <h4 class="mg-md">
         <p> Places : <%= show.places %> </p>
         </h4>
-        <!-- <a href="concerts.html" class="a-btn ltc-celestial-blue a-block">Voir</a> -->
       </div>
       <%end%>
     </div>

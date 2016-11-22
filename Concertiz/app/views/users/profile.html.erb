@@ -29,27 +29,21 @@
                 <label>
                   Nom
                 </label>
-                <!-- <input class="form-control" id="input_1187" required placeholder="El Haddad" /> -->
                 <%= text_field :input , :_1187 , {:class=>'form-control', :placeholder=>current_user.name} %>
               </div>
               <div class="form-group">
                 <label>
                   Prénom
                 </label>
-                <!-- <input class="form-control" id="input_1803" required placeholder="Auriles" /> -->
                 <%= text_field :input , :_1803 , {:class=>'form-control', :placeholder=>current_user.firstname} %>
               </div>
               <div class="form-group">
                 <label>
                   Email
                 </label>
-                <!-- <input class="form-control" id="input_1023" required placeholder="auriles0404@gmail.com" type="email" /> -->
                 <%= text_field :input , :_1023 , {:class=>'form-control', :placeholder=>current_user.email, :type=>'email'} %>
               </div>
-              <!-- <a href="index.html" class="btn  btn-yellow-ncs pull-right">Modifier le mot de passe</a> -->
-
               <%= link_to 'Modifier mes informations personnelles', edit_user_path(current_user.id) , {:class=>'btn btn-yellow-ncs pull-right'} %>
-
             </form>
           </div>
         </div>
@@ -57,13 +51,11 @@
       <div class="col-sm-6">
         <div class="panel">
           <div class="panel-heading bgc-white-smoke">
-            <!-- <img src="img/broken-img.png" class="img-circle img-frame-rd" width="100" height="100" /> -->
             <%= image_tag 'profil.jpg' , {:class=>'img-circle img-frame-rd', :width=>'100', :height=>'100' }  %>
           </div>
           <div class="panel-body">
             <form id="form_1041" novalidate>
               <div class="form-group">
-                <!-- <textarea class="form-control" rows="4" cols="50" id="description" data-validation-required-message="description is required." placeholder="Développeur Frontend actuellement à la recherche d'une alternance !"></textarea> -->
                 <%= text_field :textarea , :description , {:class=>'form-control', :placeholder=>'Développeur Frontend actuellement à la recherche d\'une alternance !'} %>
               </div>
             </form>

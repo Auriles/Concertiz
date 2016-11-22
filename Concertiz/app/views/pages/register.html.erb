@@ -11,40 +11,33 @@
             <label>
               Nom
             </label>
-            <!-- <input id="name" class="form-control" required placeholder="Entrez votre nom" /> -->
             <%= text_field :name , :name , {:class=>'form-control', :placeholder=>'Entrez votre nom'} %>
           </div>
           <div class="form-group">
             <label>
               Prénom
             </label>
-            <!-- <input id="prénom" class="form-control" required placeholder="Entrez votre prénom" data-validation-required-message="prénom is required." /> -->
             <%= text_field :prénom , :prénom , {:class=>'form-control', :placeholder=>'Entrez votre prénom'} %>
           </div>
           <div class="form-group">
             <label>
               Email
             </label>
-            <!-- <input id="email" class="form-control" type="email" required placeholder="Entrez votre adresse email" /> -->
             <%= text_field :email , :email , {:class=>'form-control', :type=>'email', :placeholder=>'Entrez votre adresse email'} %>
           </div>
           <div class="form-group">
             <label>
               Mot de passe
             </label>
-            <!-- <input id="identifiant" class="form-control" required placeholder="Veuillez choisir un mot de passe" maxlength="25" data-validation-required-message="identifiant is required." /> -->
             <%= password_field :identifiant , :identifiant , {:class=>'form-control', :placeholder=>'Veuillez choisir un mot de passe', :maxlength=>"25"} %>
           </div>
           <div class="form-group">
             <label>
               Confirmation de mot de passe
             </label>
-            <!-- <input id="mdp" class="form-control" required placeholder="Veuillez confirmer votre mot de passe" maxlength="25" data-validation-required-message="mdp is required." /> -->
             <%= password_field :mdp , :mdp , {:class=>'form-control', :placeholder=>'Veuillez confirmer votre mot de passe', :maxlength=>"25"} %>
           </div>
-          <!-- <button class="bloc-button btn btn-block btn-sm btn-rd btn-medium-spring-green" type="submit"> -->
           <%= submit_tag 'S\'inscrire', {:class=>'bloc-button btn btn-block btn-sm btn-rd btn-medium-spring-green'} %>
-            <!-- <span class="ion ion-android-done icon-sm"></span> -->
           </button>
         </form>
       </div>

@@ -1,12 +1,3 @@
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
 <!-- bloc-7 -->
 <div class="bloc bgc-blue-gray l-bloc" id="bloc-7">
   <div class="container bloc-md">
@@ -49,7 +40,7 @@
       <div class="col-sm-12">
         <div class="row">
           <% @shows.each do |show| %>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <%= image_tag 'nekfeu_concert' , {:class=>'img-responsive'}  %>
               <h4 class="mg-md">
               <p>Artiste : <%= show.artist %> </p>
@@ -70,13 +61,19 @@
                 <span class="divider"></span>
               </div>
               <%= form_for(show) do |f| %>
-              <%= f.submit 'Réserver',{:class=>'btn btn-block btn-blue-gray bloc-button'} %>
+              <%= f.submit 'Réserver', new_reservation_show_path(@show) {:class=>'btn btn-block btn-blue-gray bloc-button'} %>
               <%end%>
               <div class="divider-h">
                 <span class="divider"></span>
               </div>
-              <div class="fb-like" data-href="http://localhost:3000/pages/concerts" data-layout="button" data-action="recommend" data-size="small" data-show-faces="true" data-share="true"></div>
-              <div class="fb-comments" data-href="http://localhost:3000/pages/concerts" data-width="10" data-numposts="3"></div>
+              <form id="form_794" novalidate>
+                <div class="form-group">
+                  <label>
+                    Commentaires
+                  </label>
+                  <%= text_field :textarea , :_2466 , {:class=>'form-control', :placeholder=>'Soyez le premier à commenter !'} %>
+                </div>
+              </form>
             </div>
             <%end%>
             </div>

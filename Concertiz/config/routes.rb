@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :shows
+
+  resources :searches
+  resources :shows do
+  resources :reservations
+  end
+
   get 'user_sessions/new'
 
   get 'user_sessions/create'
@@ -17,6 +22,7 @@ Rails.application.routes.draw do
   get 'pages/concerts'
 
   get 'users/profile'
+
 
   root :to => 'pages#home'
   resources :user_sessions

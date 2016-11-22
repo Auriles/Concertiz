@@ -8,22 +8,13 @@
             Connexion
           </h1>
           <div class="form-group">
-            <!-- <label>
-              Identifiant
-            </label> -->
             <%= label_tag :Identifiant %><br />
-            <!-- <input id="name4" class="form-control" required placeholder="Veuillez saisir votre email" /> -->
             <%= text_field_tag :email, '', {:class=>'form-control', :type=>'email', :placeholder=>'Veuillez saisir votre adresse email', :id=>'name4'} %>
           </div>
           <div class="form-group">
-            <!-- <label>
-              Mot de passe
-            </label> -->
             <%= label_tag :Mot_de_passe %><br />
-            <!-- <input id="email4" class="form-control" required placeholder="Veuillez saisir votre mot de passe" type="password" /> -->
             <%= password_field_tag :password, '', {:class=>'form-control', :placeholder=>'Veuillez saisir votre mot de passe', :maxlength=>"25"} %>
           </div>
-          <!-- <a class="btn btn-block btn-rd btn-sm btn-medium-spring-green" href="profile.html"><span class="ion ion-android-done icon-sm"></span></a> -->
           <%= submit_tag 'Se connecter', {:class=>'btn btn-block btn-rd btn-sm btn-medium-spring-green'} %>
         <%end%>
       </div>
