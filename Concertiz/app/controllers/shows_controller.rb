@@ -5,6 +5,9 @@ class ShowsController < ApplicationController
   # GET /shows.json
   def index
     @shows = Show.all
+      unless logged_in? && current_user.admin
+       redirect_to root_url
+      end
   end
 
   # GET /shows/1
