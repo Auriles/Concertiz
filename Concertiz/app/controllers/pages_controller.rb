@@ -15,6 +15,7 @@ skip_before_action :require_login, only: [:home, :concerts, :profile]
 
   def home
     @titre = "Home"
+    @shows = Show.all
   end
 
   def concerts

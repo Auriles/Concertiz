@@ -55,93 +55,33 @@
 <!-- bloc-1 END -->
 
 <!-- bloc-2 -->
+
 <div class="bloc bgc-white-smoke l-bloc" id="bloc-2">
   <div class="container bloc-md">
     <div class="row">
+    <% @shows.each do |show| %>
       <div class="col-sm-3">
         <!-- <img src="img/placeholder-image.png" class="img-responsive" /> -->
         <%= image_tag 'nekfeu_concert' , {:class=>'img-responsive'}  %>
-        <h3 class="mg-md">
-          Concert 1
-        </h3>
         <h4 class="mg-md">
-          Artiste :
+        <p>Artiste : <%= show.artist %> </p>
         </h4>
         <h4 class="mg-md">
-          Places disponibles :
+        <p> Date : <%= show.date %> </p>
         </h4>
         <h4 class="mg-md">
-          Horaires :
+        <p> Adresse : <%= show.adress %> </p>
         </h4>
         <h4 class="mg-md">
-          Adresse :
-        </h4>
-        <!-- <a href="concerts.html" class="a-btn ltc-celestial-blue a-block">Voir</a> -->
-        <%= link_to 'Voir', 'concerts.html', {:class=>'a-btn ltc-celestial-blue a-block'} %>
-      </div>
-      <div class="col-sm-3">
-        <!-- <img src="img/placeholder-image.png" class="img-responsive" /> -->
-        <%= image_tag 'eminem_concert' , {:class=>'img-responsive'}  %>
-        <h3 class="mg-md">
-          Concert 2
-        </h3>
-        <h4 class="mg-md">
-          Artiste :
+        <p> Prix : <%= show.price %> </p>
         </h4>
         <h4 class="mg-md">
-          Places disponibles :
-        </h4>
-        <h4 class="mg-md">
-          Horaires :
-        </h4>
-        <h4 class="mg-md">
-          Adresse :
+        <p> Adresse : <%= show.places %> </p>
         </h4>
         <!-- <a href="concerts.html" class="a-btn ltc-celestial-blue a-block">Voir</a> -->
         <%= link_to 'Voir', 'concerts.html', {:class=>'a-btn ltc-celestial-blue a-block'} %>
       </div>
-      <div class="col-sm-3">
-        <!-- <img src="img/placeholder-image.png" class="img-responsive" /> -->
-        <%= image_tag 'onerepublic_concert' , {:class=>'img-responsive'}  %>
-        <h3 class="mg-md">
-          Concert 3
-        </h3>
-        <h4 class="mg-md">
-          Artiste :
-        </h4>
-        <h4 class="mg-md">
-          Places disponibles :
-        </h4>
-        <h4 class="mg-md">
-          Horaires :
-        </h4>
-        <h4 class="mg-md">
-          Adresse :
-        </h4>
-        <!-- <a href="concerts.html" class="a-btn ltc-celestial-blue a-block">Voir</a> -->
-        <%= link_to 'Voir', 'concerts.html', {:class=>'a-btn ltc-celestial-blue a-block'} %>
-      </div>
-      <div class="col-sm-3">
-        <!-- <img src="img/placeholder-image.png" class="img-responsive" /> -->
-        <%= image_tag 'thescript_concert' , {:class=>'img-responsive'}  %>
-        <h3 class="mg-md">
-          Concert 4
-        </h3>
-        <h4 class="mg-md">
-          Artiste :
-        </h4>
-        <h4 class="mg-md">
-          Places disponibles :
-        </h4>
-        <h4 class="mg-md">
-          Horaires :
-        </h4>
-        <h4 class="mg-md">
-          Adresse :
-        </h4>
-        <!-- <a href="concerts.html" class="a-btn ltc-celestial-blue a-block">Voir</a> -->
-        <%= link_to 'Voir', 'concerts.html', {:class=>'a-btn ltc-celestial-blue a-block'} %>
-      </div>
+      <%end%>
     </div>
   </div>
 </div>

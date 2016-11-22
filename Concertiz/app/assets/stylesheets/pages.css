@@ -14,10 +14,6 @@ a:hover{text-decoration: none; cursor:pointer;}
 
 a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safari */
 
-
-
-
-
 /* Globals type styling */
  h4, h5, h6, p, label, a{
   font-family:Open Sans Condensed;
